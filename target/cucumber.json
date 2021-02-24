@@ -1,0 +1,238 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-24T22:58:44.591Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2001100,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "com.intabella.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Login as a driver",
+        "description": "",
+        "id": "users-should-be-able-to-login;login-as-a-driver",
+        "after": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "com.intabella.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3000600,
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.intabella.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "the user enters the driver information",
+            "match": {
+              "location": "com.intabella.step_definitions.LoginStepDefs.the_user_enters_the_driver_information()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "the user should be able to login",
+            "match": {
+              "location": "com.intabella.step_definitions.LoginStepDefs.the_user_should_be_able_to_login()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-24T22:58:44.821Z",
+        "before": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "com.intabella.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Login as a sales manager",
+        "description": "",
+        "id": "users-should-be-able-to-login;login-as-a-sales-manager",
+        "after": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "com.intabella.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 999900,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.intabella.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000900,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "the user enters the sales manager information",
+            "match": {
+              "location": "com.intabella.step_definitions.LoginStepDefs.the_user_enters_the_sales_manager_information()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4995100,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "the user should be able to login",
+            "match": {
+              "location": "com.intabella.step_definitions.LoginStepDefs.the_user_should_be_able_to_login()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-02-24T22:58:44.858Z",
+        "before": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "match": {
+              "location": "com.intabella.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Login as a store manager",
+        "description": "",
+        "id": "users-should-be-able-to-login;login-as-a-store-manager",
+        "after": [
+          {
+            "result": {
+              "duration": 1000500,
+              "status": "skipped"
+            },
+            "match": {
+              "location": "com.intabella.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1001900,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.intabella.step_definitions.LoginStepDefs.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999100,
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "the user enters the store manager information",
+            "match": {
+              "location": "com.intabella.step_definitions.LoginStepDefs.the_user_enters_the_store_manager_information()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "the user should be able to login",
+            "match": {
+              "location": "com.intabella.step_definitions.LoginStepDefs.the_user_should_be_able_to_login()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "Users should be able to login",
+    "description": "",
+    "id": "users-should-be-able-to-login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": [
+      {
+        "name": "@wip",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 2
+        }
+      }
+    ]
+  }
+]
