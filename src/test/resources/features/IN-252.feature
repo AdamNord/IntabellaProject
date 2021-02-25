@@ -1,7 +1,6 @@
 Feature: Truck_Driver_filtering_functions_in_Vehicle_Odometer
 
   Background:
-		#@IN-216
     Given the user is on the login page
     When the user enters the driver information
     Then the user should be able to login
