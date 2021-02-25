@@ -47,6 +47,7 @@ public class MainStepDefs {
         switch (buttonName) {
             case "Grid Settings":
                 myButton = mainPage.gridSettingsButton;
+                System.out.println("switch girdi");
                 break;
         }
         myButton.click();
