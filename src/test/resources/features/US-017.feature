@@ -12,7 +12,7 @@ Feature: Truck_Driver_filtering_functions_in_Vehicle_Odometer
 	#2-Truck driver can use Filters sign with opening Manage Filters button for filtering informations
 	#3-Truck driver can refresh the page by using Refresh button
 	#4-Truck driver can reset the filtering settings by using Reset button
-  @IN-252
+
   Scenario: Test of IN-18 Truck Driver filtering functions in Vehicle Odometer module US-017
     And the user navigates to "Fleet" , "Vehicle Odometer"
     Then the user should be able to see the page "Vehicle Odometer"

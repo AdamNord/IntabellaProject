@@ -1,23 +1,18 @@
 package com.intabella.step_definitions;
 
-import com.intabella.pages.BasePage;
 import com.intabella.pages.LoginPage;
-import com.intabella.pages.MainPage;
+import com.intabella.pages.VehicleOdometerPage;
 import com.intabella.utilities.BrowserUtils;
 import com.intabella.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.jsoup.Connection;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.RemoteWebElement;
 
-public class MainStepDefs {
+public class US_017_StepDefs {
     LoginPage loginPage = new LoginPage();
-    MainPage mainPage = new MainPage();
+    VehicleOdometerPage mainPage = new VehicleOdometerPage();
 
     @And("the user selects demanded columns")
     public void theUserSelectsDemandedColumns() {
@@ -26,8 +21,6 @@ public class MainStepDefs {
     @And("the user navigates to {string} , {string}")
     public void theUserNavigatesTo(String arg0, String arg1) {
         mainPage.navigateToModule(arg0,arg1);
-
-
     }
 
     @Then("the user should be able to see the page {string}")
