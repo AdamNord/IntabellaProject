@@ -36,7 +36,7 @@ public abstract class BasePage {
     @FindBy(linkText = "My User")
     public WebElement myUser;
 
-    @FindBy(xpath = "//*[@title='Grid Settings']")
+    @FindBy(className = "fa-cog hide-text")
     public WebElement gridSettingsButton;
 
     public BasePage() {
