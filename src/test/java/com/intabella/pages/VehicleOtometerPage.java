@@ -56,8 +56,8 @@ public class VehicleOtometerPage {  //locasyonlar burada pagelerde tanımla
     @FindBy(xpath = "//span[contains(text(),'(3)')]")
     public WebElement recent_email_increasing3;
 
-    @FindBy(xpath = "//span[@class='added']")
-    public WebElement addedtextinpopup;
+    @FindBy(xpath = "(//span[@class='added'])[1]")
+    public WebElement addedtextinpopupforMail;
 
 
     @FindBy(xpath = "(//a[@class='btn widget-picker-add-btn btn-primary'])[2]")
@@ -102,5 +102,63 @@ public class VehicleOtometerPage {  //locasyonlar burada pagelerde tanımla
     @FindBy(xpath = "//a[contains(text(),'Logout')]")
     public WebElement LogOutButton;
 
+
+    @FindBy(css = "span.title-level-1")
+    public WebElement fleetlink;
+    @FindBy(xpath = "//span[contains(text(),'Vehicles')]")
+    public WebElement vehiclee;
+    @FindBy(xpath = "//i[@class=\"fa-star hide-text\"]")
+    public WebElement favorıtebutton;
+    @FindBy(xpath = "/button[@class=\"btn favorite-button gold-icon\"]")
+    public WebElement yellowfavorıte;
+    @FindBy(xpath = "//i[@class=\"fa-bars\"]")
+    public WebElement beside;
+    @FindBy(xpath = "//a[@href=\"#mostviewed-content\"]")
+    public WebElement mostview;
+    @FindBy(xpath = "//i[@class=\"fa-flag menu-icon\"]")
+    public WebElement mostviewFlagicon;
+    @FindBy(xpath = "//i[@class=\"fa-star-o menu-icon\"]")
+    public WebElement favoritesinrecent;
+    @FindBy(xpath = "((//a[contains(text(),'Car - Entities - System - Car - Entities - System')])[3]")
+    public WebElement favoritebox;
+
+
+    @FindBy(xpath = "(//a[contains(text(),'Vehicle Odometer - Entities - System - Car - Entities - System')])[10]")
+    public WebElement favoriteboxFORVEHİCLE_OTOMETER_PAGE;
+
+
+    public int getsidebarcount(String text) {
+        //vehicleOtometerPage.addedtextinpopup.getText() = Added (6)
+        int firstp = text.indexOf('(');
+        int secondp = text.indexOf(')');
+        String result = text.substring(firstp + 1, secondp);
+        return Integer.parseInt(result);
+
+
+    }
+
+
+    public WebElement widgetadder(String widgetname) {
+
+        WebElement widget;
+
+
+        switch (widgetname) {
+            case "Recent emails":
+                widget = recent_email_addition;
+                break;
+            case "Sticky Note":
+                widget = sticky_note_addition;
+                break;
+            case "Task list":
+                widget = task_list_addition;
+                break;
+
+            default:
+                throw new IllegalStateException("Unexpected value: " + widgetname);
+        }
+        return widget;
+
+    }
 
 }
