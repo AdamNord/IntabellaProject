@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class IN_245_US018_StepDefs {
+public class US_018_StepDefs {
 
     @When("user navigated to {string} tab {string} module")
     public void user_navigated_to_tab_module(String string, String string2) {
@@ -24,29 +24,21 @@ public class IN_245_US018_StepDefs {
     @When("Click the plus button on the right sidebar")
     public void click_the_plus_button_on_the_right_sidebar() {
         VehicleOtometerPage clickplus=new VehicleOtometerPage();
-        BrowserUtils.waitFor(5);
         clickplus.plussign.click();
 
 
     }
 
-    @Then("opening {string} box")
-    public void opening_box(String string) {
-//???"görünür" de ne ile assert edilir
-
-      VehicleOtometerPage sidebarboxx=new VehicleOtometerPage();
-      sidebarboxx.sidebarbox.isDisplayed();
-        BrowserUtils.waitFor(5);
-
-
-    }
 
     //???Burada birtane algılamış,genellemiş.Halbuki 3 tane var. scenerioya bakınca görünür.Burada ne yapacağız?
     @When("Click {string} button, corresponding to {string}")
     public void click_button_corresponding_to(String string, String string2) {
-        VehicleOtometerPage adition=new VehicleOtometerPage();
-        adition.recent_email_addition.click();
-        BrowserUtils.waitFor(5);
+        VehicleOtometerPage vehicleOtometerPage=new VehicleOtometerPage();
+        vehicleOtometerPage.recent_email_addition.click();
+        BrowserUtils.waitFor(2);
+
+        System.out.println("vehicleOtometerPage.addedtextinpopup.getText() = " + vehicleOtometerPage.addedtextinpopup.getText());
+        System.out.println("vehicleOtometerPage.addedtextinpopup.getAttribute() = " + vehicleOtometerPage.addedtextinpopup.getAttribute(""));
 
     }
 
@@ -79,5 +71,13 @@ public class IN_245_US018_StepDefs {
         recentemail.forverificationRECENTEMAİL.isDisplayed();
 
     }
+
+
+    @Then("opening Vehicle information page \\({string} page) open")
+    public void opening_Vehicle_information_page_page_open(String string) {
+
+    }
+
+
 
 }

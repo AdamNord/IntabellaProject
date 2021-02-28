@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 public class VehicleOtometerPage {  //locasyonlar burada pagelerde tanımla
     //step defnitionslarda methodlar vasıtasıyla kodlarımızı yazarak çağırıyoruz(page lerde tanımladığımız locasyonları kullanıyoruz)
 
@@ -12,14 +13,11 @@ public class VehicleOtometerPage {  //locasyonlar burada pagelerde tanımla
         PageFactory.initElements(Driver.get(), this);
     }
 
-
-    //  @FindBy(xpath = "//span[@class=\"title title-level-1\"]")
+    //US_018  US_022
 
     @FindBy(css = "span.title-level-1") //fleet
     public WebElement menuOptions;
 
-//   @FindBy(xpath = ("//span[@class='title title-level-1'])[1]") //Bunu oluşturamıyorum NEDEN???? For Fleet
-    //          @FindBy(css = "span.title-level-1") //fleet
 
     @FindBy(xpath = "//span[contains(text(),'Vehicle Odometer')]")
     public WebElement vehicleodometer;
@@ -33,10 +31,6 @@ public class VehicleOtometerPage {  //locasyonlar burada pagelerde tanımla
     @FindBy(xpath = "//a[contains(text(),'Learn how to use this space')]")
     public WebElement beforeclickpinmessage;
 
-/*
-    @FindBy(xpath = "//button[@class=\"btn minimize-button\"]")
-    public WebElement pincolor;
-*/
 
     @FindBy(xpath = "//i[@class=\"fa-thumb-tack hide-text\"]")
     public WebElement pinsign;
@@ -61,6 +55,9 @@ public class VehicleOtometerPage {  //locasyonlar burada pagelerde tanımla
 
     @FindBy(xpath = "//span[contains(text(),'(3)')]")
     public WebElement recent_email_increasing3;
+
+    @FindBy(xpath = "//span[@class='added']")
+    public WebElement addedtextinpopup;
 
 
     @FindBy(xpath = "(//a[@class='btn widget-picker-add-btn btn-primary'])[2]")
