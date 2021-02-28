@@ -19,4 +19,4 @@ Feature:
 	@IN-228 @IN-233
 	Scenario: US-024 Only truck driver can access to Vehicle Odometer Page Test
 		When the user navigate to Fleet module and click on the Vehicle Odometer
-		Then the user should navigate to Vehicles Odometers page
+	#	Then the user should navigate to Vehicles Odometers page

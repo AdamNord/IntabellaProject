@@ -20,6 +20,9 @@ public class LoginPage {
     @FindBy(name = "_submit")
     public WebElement submit;
 
+    @FindBy(xpath = "//button[@type=\"submit\"]")
+    public WebElement loginbutton; //FOR IN-248-StepDefs
+
 
     public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
