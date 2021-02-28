@@ -2,9 +2,9 @@ Feature:
 
 	Background:
 		#@IN-230
-		Given the sales manager is on the login page
-		When the sales manager entered valid credentials
-		Then the sales manager should be able to login 
+		Given the user is on the login page
+		When the user enters the sales manager information
+		Then the user should be able to login
 		
 
 	#{color:#00875a}*User Story :* {color}

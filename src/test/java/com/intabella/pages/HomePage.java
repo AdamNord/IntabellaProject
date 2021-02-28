@@ -11,11 +11,16 @@ public class HomePage {
         PageFactory.initElements(Driver.get(), this);
     }
 
-    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[1]/div/div/ul/li[4]/a/span")
-    public WebElement fleetModule;
+    @FindBy(xpath = "//span[@class='title title-level-1']")
+    public WebElement fleetTab;
 
-    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[1]/div/div/ul/li[4]/a/span")
-    public WebElement vehicleOdometerButton;
+    @FindBy(xpath = "(//span[@class='title title-level-2'])[2]")
+    public WebElement vehicleOdometerModule;
+
+
+    @FindBy(linkText = "Create Vehicle Odometer")
+    public WebElement CreateVehOdomBtn;
+
 
 
 

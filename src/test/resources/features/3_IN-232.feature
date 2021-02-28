@@ -2,9 +2,9 @@ Feature:
 
 	Background:
 		#@IN-232
-		Given the store manager is on the login page
-		When the store manager entered valid credentials
-		Then the store manager should be able to login
+		Given the user is on the login page
+		When the user enters the store manager information
+		Then the user should be able to login
 		
 
 	#{color:#00875a}*User Story :* {color}
