@@ -17,22 +17,22 @@ public class VehicleCostPage {
     public WebElement rightarrow;
 
 
-    @FindBy(xpath = "//button[@data-toggle=\"dropdown\"]")
-    public WebElement topright;
+    @FindBy(xpath = "(//button[@data-toggle=\"dropdown\"])[1]")
+    public WebElement dropdowntablesize;
 
     @FindBy(xpath = "(//button[@data-toggle=\"dropdown\"])[1]")
     public WebElement selectoption;
 
-    @FindBy(xpath = "//a[@class=\"dropdown-item\"]")
+    @FindBy(xpath = "(//a[@class=\"dropdown-item\"])[1]")
     public WebElement ten;
 
-    @FindBy(xpath = "//a[@class=\"dropdown-item\"]/../../../ul/li[2]/a")
+    @FindBy(xpath = "(//a[@class=\"dropdown-item\"])[2]")
     public WebElement twentyfive;
 
-    @FindBy(xpath = "//a[@class=\"dropdown-item\"]/../../../ul/li[3]/a")
+    @FindBy(xpath = "(//a[@class=\"dropdown-item\"])[3]")
     public WebElement fifty;
 
-    @FindBy(xpath = "//a[@class=\"dropdown-item\"]/../../../ul/li[4]/a")
+    @FindBy(xpath = "(//a[@class=\"dropdown-item\"])[4]")
     public WebElement hundred;
 
     @FindBy(xpath = "//ul@[class=\"dropdown-menu pull-right\"]")
@@ -94,7 +94,7 @@ public class VehicleCostPage {
     public WebElement repair;
 
     @FindBy(xpath = "(//ul[@class=\"dropdown-menu pull-right\"])[2]")
-    public WebElement table;
+    public List<WebElement> table;
 
     @FindBy(xpath = "(//td[@class='number-cell grid-cell grid-body-cell grid-body-cell-TotalPrice'])[1]")
     public WebElement yazı;
@@ -109,6 +109,31 @@ public class VehicleCostPage {
     @FindBy(xpath = "(//td[@class=\"number-cell grid-cell grid-body-cell grid-body-cell-TotalPrice\"])[1]")
     public WebElement sayı;
 
+    @FindBy(xpath = "//table[@class='grid table-hover table table-bordered table-condensed']/tbody/tr")
+    public List<WebElement> vehiclecosttable;
 
+    public WebElement getdropdown(int size) {
+        WebElement number;
+        //if-switch case
+        switch (size) {
+            case 10:
+                number = ten;
+                break;
+            case 25:
+                number = twentyfive;
+                break;
+            case 50:
+                number = fifty;
+                break;
+            case 100:
+                number = hundred;
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + size);
+        }
+        return number;
+
+
+    }
 }
 

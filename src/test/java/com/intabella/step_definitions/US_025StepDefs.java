@@ -6,6 +6,9 @@ import com.intabella.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class US_025StepDefs {
 
@@ -79,22 +82,27 @@ public class US_025StepDefs {
     @When("the user clicks {string} on the top right of the page")
     public void the_user_clicks_on_the_top_right_of_the_page(String string) {
 
+
         VehicleCostPage vehiclecost = new VehicleCostPage();
-        vehiclecost.topright.click();
+        BrowserUtils.waitFor(3);
+        vehiclecost.dropdowntablesize.click();
 
-    }
-
-    @Then("the user sees {string} options appear \\({double})")
-    public void the_user_sees_options_appear(String string, Double double1) {
-
-        VehicleCostPage change = new VehicleCostPage();
-        change.table.isDisplayed();
-        BrowserUtils.waitFor(5);
 
     }
 
     @When("the user select {int} forum options")
     public void the_user_select_forum_options(Integer int1) {
+
+
+        VehicleCostPage vehiclecost =new VehicleCostPage();
+
+        if (int1!=10){
+            vehiclecost.dropdowntablesize.click();
+
+        }
+
+        vehiclecost.getdropdown(int1).click();
+        BrowserUtils.waitFor(3);
 
 
 
@@ -103,7 +111,46 @@ public class US_025StepDefs {
     @Then("verify row number on the table declared {int}")
     public void verify_row_number_on_the_table_declared(Integer int1) {
 
+        VehicleCostPage vehiclecost =new VehicleCostPage();
+        int tablesize = vehiclecost.vehiclecosttable.size();
+        System.out.println("tablesize = " + tablesize);
+
+        if (int1==tablesize){
+            Assert.assertTrue("tablesize",int1==tablesize);
+        } else {
+            Assert.assertTrue("tablesize",int1==Integer.parseInt(vehiclecost.dropdowntablesize.getText()));
+
+        }
+
+
     }
+
+    @Then("the user sees View per page options appear {string},{string},{string},{string}")
+    public void the_user_sees_View_per_page_options_appear(String string, String string2, String string3, String string4) {
+
+        VehicleCostPage change = new VehicleCostPage();
+        for (WebElement option : change.table) {
+            System.out.println(option.getText());
+
+        }
+
+        for (WebElement option : change.table) {
+            System.out.println(option.getAttribute("data-size"));
+
+        }
+
+        BrowserUtils.waitFor(5);
+
+
+    }
+    @Then("the user sees View per page options appear {double}")
+    public void the_user_sees_View_per_page_options_appear(Double double1) {
+
+
+
+    }
+
+
 
    //US-025 Truck driver can get all informations to her/his own email address by using Export Grid button in csv and xlsx formats
 

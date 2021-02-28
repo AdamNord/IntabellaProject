@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class VehicleOdometerPage {
 
     public VehicleOdometerPage(){
@@ -28,6 +30,9 @@ public class VehicleOdometerPage {
 
     //@FindBy(xpath = "//td[@class='string-cell grid-cell grid-body-cell grid-body-cell-Type'][1]")
     //public WebElement yazı;
+
+
+
 
 
 

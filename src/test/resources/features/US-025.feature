@@ -47,7 +47,7 @@ Feature:
     When the user navigated to  "Fleet" and "Vehicle Cost" sees
     Then the user verify that  "Vehicles Costs" informations  page openned.
     When the user clicks "View per page" on the top right of the page
-    Then the user sees "View per page" options appear (10,25,50,100)
+    Then the user sees View per page options appear "10","25","50","100"
     When the user select 10 forum options
     Then verify row number on the table declared 10
     When the user select 25 forum options
