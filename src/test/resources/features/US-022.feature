@@ -25,3 +25,4 @@ Feature:
 		When click the "yes,delete" option on the "delete confirmation" pop-up window page
 		Then Verify selected vehicle odometer's line is deleted
 		Then Verify seen "One entity was deleted" message top of and middle of the page, after selected vehicle odometer's line is deleted
+

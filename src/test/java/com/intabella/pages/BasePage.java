@@ -13,7 +13,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class BasePage {
+public abstract class BasePage {
+
+
+    @FindBy(xpath = "(//ul[@class='extra-list'])[2]")
+    public WebElement favoritelist;
+
+    @FindBy(xpath = "(//ul[@class='extra-list'])[2]")
+    public List<WebElement> favoriteListofWebelement;
+
 
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
@@ -113,6 +121,9 @@ public class BasePage {
             BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(moduleLocator)),  5);
         }
     }
+
+
+
 
 }
 

@@ -1,4 +1,4 @@
-@wip
+@US-022
 Feature:
 
 	Background:
@@ -52,13 +52,13 @@ Feature:
 	@IN-246 @IN-253 @IN-250
 	Scenario: Truck Driver using "pin" sign for pin the page TEST(US.018)
 		When user navigated to "Fleet" tab "Vehicle odometer" module
-		When Click the pin icon on the right side of the page
+		When Click the "pin" icon on the right side of the page
 		Then pin color turned into yellow
 		Then verify pinned page added top of the dashboard
 	#*User Story :* 
 	#
 	#As a Truck Driver I should be able to use sidebar, widget, pins and favourite pages
-	#
+	#f
 	# 
 	#
 	#_*Acceptance Criterias:*_
@@ -71,10 +71,10 @@ Feature:
 	@IN-247 @IN-253 @IN-250
 	Scenario:   (US.018) Adding page to favorite list TEST
 		When user navigated to "Fleet" tab "Vehicle odometer" module
+		And user cleans favorite page list
 		When Click the Favorites icon on the right side of the page.
-		Then Favorite  icon turned yellow.
+		Then favorite icon turned yellow.
 		When Click three line icon(right side on the page) usernames's beside
-		Then opened the pop-up page(include History,Favorite,Most Viewed options)
 		When select the Favorite option
 		Then Verify your page is under favorite list	
 
@@ -92,17 +92,16 @@ Feature:
 	@IN-248 @IN-253 @IN-250
 	Scenario: (US.018) Favorite list after login TEST  
 		When user navigated to "Fleet" tab "Vehicle odometer" module
+		And user cleans favorite page list
 		When Click the Favorites icon on the right side of the page.
-		Then Favorite icon turned yellow.
+		Then favorite icon turned yellow.
 		When Click three line icon(right side on the page) usernames's beside
-		Then opened the pop-up page(include History,Favorite,Most Viewed options)
 		When select the Favorite option
 		Then Verify your page is under favorite list
 		When logout the page
 		When the user enters the driver information
 		Then the user should be able to login
 		When Click three line icon(right side on the page) usernames's beside
-		Then opened the pop-up page(include History,Favorite,Most Viewed options)
 		When select the Favorite option
 		Then Verify your page is under favorite list
 		#güncelle Jirada
@@ -123,11 +122,10 @@ Feature:
 	@IN-249 @IN-250 @IN-253
 	Scenario: (US.018) Removing from favorite list TEST  
 		When user navigated to "Fleet" tab "Vehicle odometer" module
-		Then opening vehicles page
+		And user cleans favorite page list
 		When Click the Favorites icon on the right side of the page.
-		Then Favorite icon turned yellow.
+		Then favorite icon turned yellow.
 		When Click three line icon(right side on the page) usernames's beside
-		Then opened the pop-up page(include History,Favorite,Most Viewed options)
 		When select the Favorite option
 		Then Verify your page is under favorite list
 		When Click the cross(X) sign near the favorite selection on the pop-up
