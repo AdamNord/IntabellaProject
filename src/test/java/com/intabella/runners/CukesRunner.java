@@ -12,9 +12,9 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"},
         features = "src/test/resources/features",
         glue = "com/intabella/step_definitions",
-        dryRun = true,
-        //dryRun=false,
-        tags = "@US-022"
+        //dryRun = true,
+        dryRun=false,
+        tags = "@IN-244"
 )
 public class CukesRunner {
 

@@ -2,6 +2,7 @@ package com.intabella.pages;
 
 import com.intabella.utilities.BrowserUtils;
 import com.intabella.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,6 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class VehicleOtometerPage extends BasePage{  //locasyonlar burada pagelerde tanımla
     //step defnitionslarda methodlar vasıtasıyla kodlarımızı yazarak çağırıyoruz(page lerde tanımladığımız locasyonları kullanıyoruz)
+
+
+
 
     public VehicleOtometerPage() { //ctrl+alt+l
         PageFactory.initElements(Driver.get(), this);
@@ -42,7 +46,8 @@ public class VehicleOtometerPage extends BasePage{  //locasyonlar burada pageler
   //  @FindBy(xpath = "//button[@class=\"btn minimize-button gold-icon\"]")
     public WebElement pinyellow;
 
-    @FindBy(xpath = "//button[@class='sidebar__add-widget']")
+  //  @FindBy(xpath = "//button[@class='sidebar__add-widget']")
+    @FindBy(xpath = "//button[@class=\"sidebar__add-widget\"]")
     public WebElement plussign;
 
 
@@ -76,8 +81,11 @@ public class VehicleOtometerPage extends BasePage{  //locasyonlar burada pageler
     @FindBy(xpath = "//span[contains(text(),'(2)')]")
     public WebElement sticky_note_increasing2;
 
+    @FindBy(xpath = "//strong[contains(text(),'Task list')]")
+    public  WebElement tasklist;
 
-    @FindBy(xpath = "//a[@class='btn widget-picker-add-btn btn-primary'])[3]")
+
+    @FindBy(xpath = "(//a[@class='btn widget-picker-add-btn btn-primary'])[3]")
     public WebElement task_list_addition;
 
     @FindBy(xpath = "//span[contains(text(),'(1)')]")
@@ -195,6 +203,13 @@ public class VehicleOtometerPage extends BasePage{  //locasyonlar burada pageler
 
     }
 
+    public static int getNumberOfRecords() {
+        String textOfNumberOfRecords = Driver.get().findElement(By.xpath("//*[starts-with(@id,'grid-custom-entity-grid')]//div/div[4]/label[3]")).getText();
+        String number = textOfNumberOfRecords.substring(8,10);
+        return Integer.parseInt(number);
+    }
+
+
 
 
     public void favoritepagelistcleaner(){
@@ -225,7 +240,8 @@ public class VehicleOtometerPage extends BasePage{  //locasyonlar burada pageler
    // @FindBy(xpath = "(//tr[@class='grid-row row-click-action'])[1]")
    // @FindBy(xpath = "//tr[@class='grid-row row-click-action'][1 ]")
    // @FindBy(xpath = "//td[contains(text(),'665')]")
-    @FindBy(xpath = "(//td[@class=\"date-cell grid-cell grid-body-cell grid-body-cell-Date\"])[1]")
+   // @FindBy(xpath = "(//td[@class=\"date-cell grid-cell grid-body-cell grid-body-cell-Date\"])[1]")
+    @FindBy(xpath = "//table/tbody/tr")
     public WebElement one;
     @FindBy(xpath = "(//a[@href='javascript:void(0);'])[2]")
     public WebElement delete;

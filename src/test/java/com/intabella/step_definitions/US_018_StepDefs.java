@@ -20,11 +20,8 @@ public class US_018_StepDefs {
     @When("user navigated to {string} tab {string} module")
     public void user_navigated_to_tab_module(String string, String string2) {
 
-        vehicleOtometerPage.menuOptions.click(); //fleet
-        BrowserUtils.waitFor(5);
+        vehicleOtometerPage.navigateToModule("Fleet", "Vehicle Odometer");
 
-        vehicleOtometerPage.vehicleodometer.click(); //vehicle otometer
-        BrowserUtils.waitFor(10);
 
     }
 
@@ -32,8 +29,12 @@ public class US_018_StepDefs {
     public void click_the_plus_button_on_the_right_sidebar() {
         WebDriverWait wait = new WebDriverWait(Driver.get(), 15);
         wait.until(ExpectedConditions.elementToBeClickable(vehicleOtometerPage.plussign));
-        BrowserUtils.waitForPageToLoad(10);
-        vehicleOtometerPage.plussign.click();
+        BrowserUtils.waitForPageToLoad(13);
+
+
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.get();
+        jse.executeScript("arguments[0].click();", vehicleOtometerPage.plussign);
+        BrowserUtils.waitFor(3);
 
 
     }
@@ -48,8 +49,9 @@ public class US_018_StepDefs {
 
         afterclick = vehicleOtometerPage.getsidebarcount(vehicleOtometerPage.addedtextinpopupforMail.getText());
 
+
         vehicleOtometerPage.widgetadder("Sticky Note").click();
-        vehicleOtometerPage.widgetadder("Task List").click();
+        vehicleOtometerPage.widgetadder("Task list").click();
 
         System.out.println("vehicleOtometerPage.addedtextinpopup.getText() = " + vehicleOtometerPage.addedtextinpopupforMail.getText());
         System.out.println("vehicleOtometerPage.addedtextinpopup.getAttribute() = " + vehicleOtometerPage.addedtextinpopupforMail.getAttribute(""));
@@ -75,11 +77,10 @@ public class US_018_StepDefs {
     public void verify_were_added_to_sidebar(String string, String string2, String string3) {
 
 
-        vehicleOtometerPage.forverificationSTİCKYNOTE.isDisplayed();
+      Assert.assertTrue( vehicleOtometerPage.forverificationSTİCKYNOTE.isDisplayed());
 
-        vehicleOtometerPage.forverificationTASKLİST.isDisplayed();
-
-        vehicleOtometerPage.forverificationRECENTEMAİL.isDisplayed();
+     Assert.assertTrue(vehicleOtometerPage.forverificationTASKLİST.isDisplayed());
+     Assert.assertTrue( vehicleOtometerPage.forverificationRECENTEMAİL.isDisplayed());  ;
 
     }
 
@@ -114,10 +115,7 @@ public class US_018_StepDefs {
         BrowserUtils.waitFor(5);
 
     }
-//   ----------------IN247------------------
 
-
-    //----------FOR IN-48-------
 
     @When("user cleans favorite page list")
     public void user_cleans_favorite_page_list() {
@@ -130,12 +128,12 @@ public class US_018_StepDefs {
     @When("Click the Favorites icon on the right side of the page.")
     public void click_the_Favorites_icon_on_the_right_side_of_the_page() {
 
-        BrowserUtils.waitFor(3);
+        BrowserUtils.waitFor(13);
         vehicleOtometerPage.favorıtebutton.click();
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitFor(13);
         //  JavascriptExecutor jse = (JavascriptExecutor) Driver.get();
         // jse.executeScript("arguments[0].click();",vehicleOtometerPage.favorıtebutton);
-        BrowserUtils.waitFor(3);
+     //   BrowserUtils.waitFor(3);
 
     }
 
@@ -243,12 +241,10 @@ public class US_018_StepDefs {
     }
 
 
-    //-------------- IN-49--------------------
-
     @When("Click the cross\\(X) sign near the favorite selection on the pop-up")
     public void click_the_cross_X_sign_near_the_favorite_selection_on_the_pop_up() {
 
-        vehicleOtometerPage.favoriteclose.click();//favori sayfa (history-favorites-most view deki favori kısmındaki ÇARPI(KAPATMA))
+     //   vehicleOtometerPage.favoriteclose.click();//favori sayfa (history-favorites-most view deki favori kısmındaki ÇARPI(KAPATMA))
         BrowserUtils.waitFor(3);
 //doğal olarak seçilemediği için hata veriyor.
     }

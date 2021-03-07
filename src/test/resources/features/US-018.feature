@@ -92,7 +92,7 @@ Feature:
 	@IN-248 @IN-253 @IN-250
 	Scenario: (US.018) Favorite list after login TEST  
 		When user navigated to "Fleet" tab "Vehicle odometer" module
-		And user cleans favorite page list
+	#	And user cleans favorite page list
 		When Click the Favorites icon on the right side of the page.
 		Then favorite icon turned yellow.
 		When Click three line icon(right side on the page) usernames's beside
@@ -104,7 +104,7 @@ Feature:
 		When Click three line icon(right side on the page) usernames's beside
 		When select the Favorite option
 		Then Verify your page is under favorite list
-		#güncelle Jirada
+
 
 	#*User Story :* 
 	#
@@ -122,7 +122,7 @@ Feature:
 	@IN-249 @IN-250 @IN-253
 	Scenario: (US.018) Removing from favorite list TEST  
 		When user navigated to "Fleet" tab "Vehicle odometer" module
-		And user cleans favorite page list
+	#	And user cleans favorite page list
 		When Click the Favorites icon on the right side of the page.
 		Then favorite icon turned yellow.
 		When Click three line icon(right side on the page) usernames's beside

@@ -21,8 +21,7 @@ Feature:
 		When user navigate to "Fleet" tab "Vehicle Odometer" module
 		When Select top of the  vehicle odometer on the vehicle odometerlist
 		When click to "delete"  button
-		Then opened the"delete confirmation" pop-up window page
 		When click the "yes,delete" option on the "delete confirmation" pop-up window page
-		Then Verify selected vehicle odometer's line is deleted
 		Then Verify seen "One entity was deleted" message top of and middle of the page, after selected vehicle odometer's line is deleted
+	#	Then Verify selected vehicle odometer's line is deleted
 
