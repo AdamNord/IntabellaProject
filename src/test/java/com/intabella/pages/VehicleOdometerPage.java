@@ -8,22 +8,30 @@ import org.openqa.selenium.support.PageFactory;
 
 public class VehicleOdometerPage {
 
-
     public VehicleOdometerPage() {
         PageFactory.initElements(Driver.get(), this);
     }
 
-    @FindBy(xpath = "//*[@id=\"container\"]/div[2]/div/div/div[2]/a")
+    @FindBy(css = "div#container>div:nth-of-type(2)>div>div>div:nth-of-type(2)>a")
     public WebElement createVehicleOdometerBtn;
 
     @FindBy(xpath = "//div[@class='btn-group pull-right']//button")
     public WebElement saveAndCloseBtn;
 
-    @FindBy(xpath = "//button[@type='button']")
-    public Actions addBtn;
 
-    @FindBy(className = "oro-subtitle")
-    public Actions VehiclesOdometers;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
